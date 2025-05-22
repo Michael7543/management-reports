@@ -1,8 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+@use '@fontsource-variable/onest';
 @use "primeicons/primeicons.css";
 @plugin 'tailwindcss-primeui';
 @layer tailwind, primeng;
 
 @layer tailwind {
   @import "tailwindcss";
+}
+
+body{
+  font-family: 'Onest Variable', sans-serif;;
 }
