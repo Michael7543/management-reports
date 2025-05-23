@@ -8,8 +8,8 @@
 		"watch": "ng build --watch --configuration development",
 		"test": "ng test",
 		"serve:ssr:management-reports": "node dist/management-reports/server/server.mjs",
-		"check": "pnpm biome check --write .",
-		"format": "pnpm biome format --write ."
+		"check": "bun biome check --write ./src",
+		"format": "bun biome format --write ./src"
 	},
 	"private": true,
 	"dependencies": {
