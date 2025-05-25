@@ -8,5 +8,6 @@
   [rounded]="rounded"
   [variant]="variant"
   [size]="size"
-  [styleClass]="styleClass"
+  [styleClass]="styleClass()"
+  (click)="onClick($event)"
 />

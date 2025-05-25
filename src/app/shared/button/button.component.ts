@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input } from "@angular/core";
+import { ChangeDetectionStrategy, Component, Input, input, output } from "@angular/core";
 import { ButtonModule } from "primeng/button";
 
 @Component({
@@ -27,5 +27,12 @@ export class ButtonComponent {
 	@Input() rounded!: boolean;
 	@Input() variant?: "outlined" | "text" | undefined = undefined;
 	@Input() size?: "small" | "large" | undefined = undefined;
-	@Input() styleClass?:string;
+	styleClass = input<string>();
+	handleClick = output<Event>();
+
+	onClick(event: Event) {
+		if (!this.disabled) {
+			this.handleClick.emit(event);
+		}
+	}
 }
