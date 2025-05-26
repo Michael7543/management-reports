@@ -10,5 +10,5 @@
   [minLength]="minLength"
   [autocomplete]="autocomplete"
   [class]="classInput"
-  formControlName="text"
+  (input)="onInput($event)"
 />
