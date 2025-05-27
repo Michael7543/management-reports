@@ -1,24 +1,28 @@
 <header class="header sticky top-0 text-white bg-[#2e5691]">
-  <div class="wrapper container mx-auto p-4 sm:p-2 lg:p-1">
-    <figure class="logo"></figure>
-    <nav class="nav">
-      <div class="perfil flex hidden items-center justify-end gap-2 lg:flex">
-        <figure class="perfil-image relative">
-          <img src="perfil.webp" class="aspect-square size-12 rounded-full border-2 border-green-500" alt="imagen perfil user" />
-          <div class="ball absolute right-0 bottom-1 size-3 rounded-full bg-green-500" aria-hidden="true"></div>
-        </figure>
-        <div class="perfil-data flex flex-col items-start justify-center">
-          <small class="perfil-name md:text-md block text-sm font-extrabold lg:text-lg"> Juan Carlos Morales</small>
-          <small class="perfil-actitvity md:text-md block text-sm font-medium lg:text-lg"> Agente</small>
-        </div>
-      </div>
-      <button id="btn-menu" class="btn-menu lg:hidden">
+  <div class="wrapper container mx-auto flex items-center justify-between px-4 py-3 sm:px-6 md:py-2 lg:py-1">
+    <figure class="logo w-full sm:w-auto">
+      <img src="perfil.webp" class="size-12 object-cover aspect-square" alt="logo web">
+    </figure>
+    <button id="btn-menu" class="block lg:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu">
           <path d="M4 12h16" />
           <path d="M4 18h16" />
           <path d="M4 6h16" />
         </svg>
-      </button>
-    </nav>
+    </button>
+    <div class="hidden w-full lg:flex lg:w-auto lg:items-center lg:justify-end gap-4">
+      <div class="flex items-center gap-3">
+        <figure class="relative">
+          <img src="perfil.webp" alt="Imagen perfil user"
+            class="size-12 rounded-full border-2 border-green-500 object-cover aspect-square" />
+          <div class="absolute bottom-1 right-0 h-3 w-3 rounded-full bg-green-500 aspect-square" aria-hidden="true"></div>
+        </figure>
+
+        <div class="flex flex-col text-left">
+          <small class="text-sm font-extrabold md:text-base lg:text-lg">Juan Carlos Morales</small>
+          <small class="text-xs font-medium md:text-sm lg:text-base">Agente</small>
+        </div>
+      </div>
+    </div>
   </div>
 </header>
