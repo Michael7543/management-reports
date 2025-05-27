@@ -17,6 +17,8 @@ export class ButtonSelectComponent {
 	inputId = input<string>();
 	placeholder = input<string>("Seleccione una opción");
 	label = input<string>();
+	filter = input<string>("false");
+	styleClass = input<string>();
 
 	modelChange = output<string | null>();
 }

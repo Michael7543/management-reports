@@ -1,6 +1,6 @@
 <p-select
   [ngModel]="model()"
-  [filter]="true"
+  [filter]="filter()"
   filterBy="label"
   [showClear]="true"
   (ngModelChange)="modelChange.emit($event)"
@@ -8,7 +8,7 @@
   [options]="options()"
   [group]="true"
   [placeholder]="placeholder()"
-  styleClass="w-full">
+  [styleClass]="styleClass()">
 
   <ng-template let-item #item>
     <div class="flex items-center gap-4">
