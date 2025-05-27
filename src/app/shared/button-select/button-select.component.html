@@ -1,0 +1,20 @@
+<p-iftalabel>
+  <p-select
+    [ngModel]="model()"
+    (ngModelChange)="modelChange.emit($event)"
+    [inputId]="inputId()"
+    [options]="options()"
+    [group]="true"
+    [placeholder]="placeholder()"
+    styleClass="w-full">
+
+    <ng-template let-item #item>
+      <div class="flex items-center gap-4">
+        <i class="pi pi-check-circle"></i>
+        <span>{{ item.label }}</span>
+      </div>
+    </ng-template>
+  </p-select>
+
+  <label [for]="inputId()">{{label()}}</label>
+</p-iftalabel>
