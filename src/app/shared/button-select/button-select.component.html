@@ -1,0 +1,19 @@
+<p-select
+  [ngModel]="model()"
+  [filter]="filter()"
+  filterBy="label"
+  [showClear]="true"
+  (ngModelChange)="modelChange.emit($event)"
+  [inputId]="inputId()"
+  [options]="options()"
+  [group]="true"
+  [placeholder]="placeholder()"
+  [styleClass]="styleClass()">
+
+  <ng-template let-item #item>
+    <div class="flex items-center gap-4">
+      <i class="pi pi-check-circle"></i>
+      <span>{{ item.label }}</span>
+    </div>
+  </ng-template>
+</p-select>
