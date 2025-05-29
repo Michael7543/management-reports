@@ -1,1 +1,28 @@
-<p>header works!</p>
+<header class="header sticky top-0 z-50 text-white bg-[#10284c]">
+  <div class="wrapper container mx-auto flex items-center justify-between px-4 py-3 sm:px-6 md:py-2 lg:py-1">
+    <figure class="logo">
+      <img src="logo.webp" class="w-34 object-cover aspect-auto" alt="logo web">
+    </figure>
+    <button id="btn-menu" class="block" (click)="onHamburgerClick($event)">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu">
+          <path d="M4 12h16" />
+          <path d="M4 18h16" />
+          <path d="M4 6h16" />
+        </svg>
+    </button>
+    <div class="hidden w-full lg:flex lg:w-auto lg:items-center lg:justify-end gap-4">
+      <div class="flex items-center gap-3">
+        <figure class="relative">
+          <img src="perfil.webp" alt="Imagen perfil user"
+            class="size-12 rounded-full border-2 border-green-500 object-cover aspect-square" />
+          <div class="absolute bottom-1 right-0 h-3 w-3 rounded-full bg-green-500 aspect-square" aria-hidden="true"></div>
+        </figure>
+
+        <div class="flex flex-col text-left">
+          <small class="text-sm font-extrabold md:text-base lg:text-lg">Juan Carlos Morales</small>
+          <small class="text-xs font-medium md:text-sm lg:text-base">Agente</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
