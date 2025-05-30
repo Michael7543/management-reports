@@ -12,8 +12,4 @@ import { ButtonComponent } from "../button/button.component";
 })
 export class SidebarComponent {
 	isOpen = input<boolean>(false);
-
-	ngOninit() {
-		console.log("sidebar: ", this.isOpen);
-	}
 }
