@@ -13,10 +13,9 @@ import { SidebarComponent } from "./shared/sidebar/sidebar.component";
 export class AppComponent {
 	title = "management-reports";
 
-	sidebarOpen = false;
+	sidebarOpen = true;
 
 	toggleSidebar() {
 		this.sidebarOpen = !this.sidebarOpen;
-		console.log("click desde el padre: ", this.sidebarOpen);
 	}
 }
