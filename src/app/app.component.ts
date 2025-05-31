@@ -1,12 +1,13 @@
 import { NgClass } from "@angular/common";
 import { Component } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
+import { FooterComponent } from "./shared/footer/footer.component";
 import { HeaderComponent } from "./shared/header/header.component";
 import { SidebarComponent } from "./shared/sidebar/sidebar.component";
 
 @Component({
 	selector: "app-root",
-	imports: [RouterOutlet, HeaderComponent, SidebarComponent, NgClass],
+	imports: [RouterOutlet, HeaderComponent, SidebarComponent, FooterComponent, NgClass],
 	templateUrl: "./app.component.html",
 	styleUrl: "./app.component.scss",
 })

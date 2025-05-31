@@ -1,23 +1,97 @@
-<footer >
-  <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 bg-blue-300  gap-4  p-4 ">
-    <div class="flex flex-row sm:justify-center lg:justify-start sm:justify-self-center md:justify-self-center  lg:justify-self-start justify-self-center ">
-      <p class="self-center text-sm md:text-lg text-black font-bold">© 2025 MiEmpresa. Todos los derechos reservados.</p>
+<footer class="bg-[#10284c] p-4 text-white" role="contentinfo" aria-label="Pie de página">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col md:flex-row justify-between gap-8 py-8">
+      <section aria-labelledby="contacto" class="flex-1">
+        <h2 id="contacto" class="text-lg font-bold">Contacto</h2>
+        <ul class="mt-2 flex flex-col gap-2">
+          <li>
+            <a href="tel:123456789"
+              class="flex items-center gap-2 hover:underline focus:outline-none focus:ring-2 focus:ring-blue-600">
+              <svg class="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <defs></defs>
+                <g transform="matrix(0.093749, 0, 0, 0.09299, 10.13702, 11.236875)">
+                  <path
+                    d="M -40.467 100.98 L -36.282 103.073 C -18.842 113.536 0.689 118.419 20.221 118.419 C 81.606 118.419 131.83 68.195 131.83 6.81 C 131.83 -22.487 119.971 -51.087 99.045 -72.014 C 78.118 -92.941 50.215 -104.8 20.221 -104.8 C -41.164 -104.8 -91.389 -54.575 -90.691 7.508 C -90.691 28.434 -84.413 48.664 -73.95 66.102 L -71.16 70.288 L -82.32 111.444 L -40.467 100.98 Z"
+                    fill="#00E676" style="stroke-width: 1;"></path>
+                  <path
+                    d="M 110.903 -83.175 C 87.186 -107.59 54.401 -120.84 20.918 -120.84 C -50.232 -120.84 -107.43 -62.946 -106.73 7.507 C -106.73 29.829 -100.46 51.454 -89.993 70.985 L -108.13 137.253 L -40.467 119.814 C -21.633 130.278 -0.707 135.161 20.221 135.161 C 90.674 135.161 147.874 77.263 147.874 6.811 C 147.874 -27.37 134.62 -59.458 110.904 -83.175 L 110.903 -83.175 Z M 20.918 113.537 C 2.084 113.537 -16.75 108.655 -32.794 98.889 L -36.979 96.796 L -77.437 107.259 L -66.974 67.499 L -69.764 63.313 C -100.46 13.787 -85.808 -51.785 -35.584 -82.478 C 14.64 -113.17 79.513 -98.521 110.206 -48.297 C 140.898 1.927 126.249 66.8 76.026 97.493 C 59.981 107.956 40.45 113.536 20.918 113.536 L 20.918 113.537 Z M 82.303 36.109 L 74.63 32.621 C 74.63 32.621 63.47 27.738 56.494 24.25 C 55.796 24.25 55.099 23.552 54.401 23.552 C 52.308 23.552 50.913 24.25 49.518 24.948 C 49.518 24.948 48.821 25.645 39.055 36.806 C 38.357 38.201 36.962 38.899 35.567 38.899 L 34.869 38.899 C 34.172 38.899 32.777 38.201 32.079 37.504 L 28.591 36.109 C 20.918 32.621 13.943 28.435 8.362 22.855 C 6.967 21.46 4.874 20.065 3.479 18.67 C -1.404 13.787 -6.287 8.206 -9.774 1.928 L -10.472 0.533 C -11.169 -0.165 -11.169 -0.862 -11.867 -2.257 C -11.867 -3.652 -11.867 -5.047 -11.169 -5.745 C -11.169 -5.745 -8.379 -9.233 -6.287 -11.325 C -4.891 -12.721 -4.194 -14.813 -2.799 -16.208 C -1.404 -18.301 -0.706 -21.091 -1.404 -23.184 C -2.101 -26.672 -10.472 -45.506 -12.564 -49.691 C -13.96 -51.784 -15.354 -52.481 -17.447 -53.179 L -25.12 -53.179 C -26.516 -53.179 -27.91 -52.481 -29.306 -52.481 L -30.004 -51.784 C -31.399 -51.086 -32.794 -49.691 -34.189 -48.994 C -35.584 -47.598 -36.282 -46.204 -37.677 -44.808 C -42.56 -38.53 -45.35 -30.857 -45.35 -23.184 C -45.35 -17.604 -43.955 -12.023 -41.862 -7.14 L -41.164 -5.047 C -34.886 8.206 -26.516 20.065 -15.354 30.528 L -12.564 33.318 C -10.472 35.411 -8.379 36.806 -6.984 38.898 C 7.665 51.455 24.406 60.523 43.24 65.406 C 45.333 66.103 48.123 66.103 50.216 66.801 L 57.191 66.801 C 60.679 66.801 64.864 65.406 67.655 64.011 C 69.747 62.616 71.142 62.616 72.537 61.221 L 73.933 59.825 C 75.328 58.43 76.723 57.733 78.118 56.338 C 79.513 54.943 80.908 53.548 81.606 52.152 C 83.001 49.362 83.698 45.874 84.396 42.387 L 84.396 37.504 C 84.396 37.504 83.698 36.806 82.303 36.109 L 82.303 36.109 Z"
+                    fill="#FFF" style="stroke-width: 1;"></path>
+                </g>
+              </svg>
+              123456789
+            </a>
+          </li>
+          <li>
+            <a href="mailto:soporte@hotmail.com"
+              class="flex items-center gap-2 hover:underline focus:outline-none focus:ring-2 focus:ring-blue-600">
+              <svg class="size-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+                class="icon icon-tabler icons-tabler-filled icon-tabler-mail">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M22 7.535v9.465a3 3 0 0 1 -2.824 2.995l-.176 .005h-14a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-9.465l9.445 6.297l.116 .066a1 1 0 0 0 .878 0l.116 -.066l9.445 -6.297z" />
+                <path
+                  d="M19 4c1.08 0 2.027 .57 2.555 1.427l-9.555 6.37l-9.555 -6.37a2.999 2.999 0 0 1 2.354 -1.42l.201 -.007h14z" />
+              </svg>
+              soporte&#64;hotmail.com
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="redes" class="flex-1 flex flex-col lg:items-end">
+        <h2 id="redes" class="text-lg font-bold">Redes sociales</h2>
+        <ul class="mt-2 flex items-center gap-4">
+          <li>
+            <a href="http://" aria-label="YouTube"
+              class="hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-red-600">
+              <svg class="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <g transform="matrix(0.093752, 0, 0, 0.133865, 1.028893, 10.422338)">
+                  <path
+                    d="M 239.371 -49.782 C 236.383 -60.825 227.758 -69.451 216.715 -72.439 C 196.849 -77.857 116.895 -77.857 116.895 -77.857 C 116.895 -77.857 36.937 -77.693 17.071 -72.275 C 6.029 -69.286 -2.597 -60.66 -5.585 -49.617 C -11.594 -14.319 -13.925 39.467 -5.42 73.353 C -2.432 84.395 6.194 93.021 17.236 96.01 C 37.102 101.428 117.058 101.428 117.058 101.428 C 117.058 101.428 197.013 101.428 216.878 96.01 C 227.921 93.022 236.547 84.396 239.535 73.353 C 245.873 38.005 247.826 -15.747 239.371 -49.781 L 239.371 -49.782 Z"
+                    fill="red" style="stroke-width: 1;"></path>
+                  <path fill="#FFF" d="M 91.446 50.203 L 157.774 11.785 L 91.446 -26.633 L 91.446 50.203 Z"
+                    style="stroke-width: 1;"></path>
+                </g>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="http://" aria-label="X (Twitter)"
+              class="hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-gray-600">
+              <svg class="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M 14.289 10.134 L 22.856 0.397 L 20.825 0.397 L 13.388 8.849 L 7.456 0.397 L 0.604 0.397 L 9.584 13.181 L 0.604 23.397 L 2.636 23.397 L 10.484 14.465 L 16.752 23.397 L 23.604 23.397 L 14.289 10.134 Z M 11.51 13.296 L 10.599 12.022 L 3.364 1.892 L 6.479 1.892 L 12.324 10.067 L 13.235 11.341 L 20.825 21.969 L 17.71 21.969 L 11.51 13.296 Z"
+                  style="stroke-width: 1; fill: rgb(253, 253, 253);"></path>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="http://" aria-label="Facebook"
+              class="hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-blue-600">
+              <svg class="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <defs>
+                  <linearGradient x1="50%" x2="50%" y1="97.078%" y2="0%" id="a">
+                    <stop offset="0" stop-color="#0062E0"></stop>
+                    <stop offset="1" stop-color="#19AFFF"></stop>
+                  </linearGradient>
+                </defs>
+                <g transform="matrix(0.666667, 0, 0, 0.666667, 19.389336, 17.671335)">
+                  <path
+                    d="M -14.084 9.293 C -22.584 7.793 -29.084 0.393 -29.084 -8.507 C -29.084 -18.407 -20.984 -26.507 -11.084 -26.507 C -1.184 -26.507 6.916 -18.407 6.916 -8.507 C 6.916 0.393 0.416 7.793 -8.084 9.293 L -9.084 8.493 L -13.084 8.493 L -14.084 9.293 Z"
+                    style="stroke-width: 1;"></path>
+                  <path fill="#FFF"
+                    d="M -4.084 -3.507 L -3.284 -8.507 L -8.084 -8.507 L -8.084 -12.007 C -8.084 -13.407 -7.584 -14.507 -5.384 -14.507 L -3.084 -14.507 L -3.084 -19.107 C -4.384 -19.307 -5.784 -19.507 -7.084 -19.507 C -11.184 -19.507 -14.084 -17.007 -14.084 -12.507 L -14.084 -8.507 L -18.584 -8.507 L -18.584 -3.507 L -14.084 -3.507 L -14.084 9.193 C -13.084 9.393 -12.084 9.493 -11.084 9.493 C -10.084 9.493 -9.084 9.393 -8.084 9.193 L -8.084 -3.507 L -4.084 -3.507 Z"
+                    style="stroke-width: 1;"></path>
+                </g>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </section>
     </div>
-    <div class="flex flex-row gap-4 sm:justify-center md:justify-center lg:justify-end sm:justify-self-center md:justify-self-center  lg:justify-self-end justify-self-center ">
-      <div class="flex flex-cols gap-2">
-        <app-icons-whatsapp />
-        <div class="self-center">
-            <p class="text-sm md:text-lg text-black font-bold">Contactos</p>
-            <p class="text-sm md:text-lg text-black font-bold">Empresa</p>
-        </div>
-      </div>
-      <div class="flex flex-cols">
-        <app-icons-support />
-        <div class="self-center">
-            <p class="text-sm md:text-lg text-black font-bold">Soporte tecnico</p>
-            <p class="text-sm md:text-lg text-black font-bold">soporte&#64;hotmail.com</p>
-        </div>
-      </div>
+
+    <div class="border-t border-gray-300 pt-4 text-center">
+      <small class="text-sm">© 2025 CACMQ. Todos los derechos reservados.</small>
     </div>
   </div>
 </footer>
