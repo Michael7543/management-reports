@@ -1,0 +1,21 @@
+<aside class="bg-white w-64 h-full text-black shadow-md fixed left-0 top-0 bottom-0 z-60 p-4 transition-transform duration-300 ease-in-out" [ngClass]="{'transform -translate-x-full': !isOpen()}">
+  <nav class="flex flex-col h-full justify-center" role="navigation" aria-label="Sidebar menu">
+    <!-- Menú del sidebar -->
+    <div class="flex flex-col mb-6 flex-1">
+      <h2 class="text-xl font-bold text-[#10284c] mb-4 uppercase text-pretty">Panel Administrativo</h2>
+      <label for="search" class="block text-sm font-medium text-gray-700 mb-1">Menú de opciones</label>
+      <div class="space-y-2">
+        <app-button label='Ver Registros' icon='pi pi-angle-right' iconPos='right' styleClass='w-full bg-[#10284c] hover:bg-[#1e4e6c] text-white' />
+      </div>
+    </div>
+    
+    <!-- Enlaces de navegación -->
+    <div class="border-t border-gray-300 pt-4 flex flex-col items-center justify-end gap-4 text-center">
+        <a routerLink="/" routerLinkActive="active" class="text-[#10284c] hover:underline outline w-full hover:text-white px-4 py-2 hover:bg-[#1e4e6c] rounded-md">Configuración</a>
+
+        <div class="w-full">
+          <app-button label='Cerrar Sesión' icon='pi pi-sign-out'  styleClass='w-full bg-[#10284c] hover:bg-[#1e4e6c] text-white' />
+        </div>
+    </div>
+  </nav>
+</aside>

@@ -1,10 +1,10 @@
-<router-outlet>
-
-</router-outlet>
-<div class="card flex justify-center mt-5">
-    <p-button label="Check" />
-</div>
-<i class="pi pi-check"></i>
-<div class="card flex justify-center mt-5">
-    <input type="text" pInputText  />
+<div class="min-h-screen flex">
+  <app-sidebar [isOpen]="sidebarOpen"/>
+  <div [ngClass]="{'ml-64': sidebarOpen, 'ml-0': !sidebarOpen}" class="w-full transition-all duration-300 ease-in-out">
+    <app-header (toggleSidebar)="toggleSidebar()"/> 
+    <main class="flex-1 p-4 transition-all duration-300 ease-in-out">
+      <router-outlet />
+    </main>
+    <!-- Footer -->
+  </div>
 </div>
