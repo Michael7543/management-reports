@@ -1,4 +1,4 @@
-import { Component, EventEmitter, input, Input, Output } from "@angular/core";
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from "@angular/core";
 import { InputTextModule } from "primeng/inputtext";
 
 @Component({
@@ -6,20 +6,21 @@ import { InputTextModule } from "primeng/inputtext";
 	imports: [InputTextModule],
 	templateUrl: "./input.component.html",
 	styleUrl: "./input.component.scss",
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class InputComponent {
-	@Input() type: string = "text";
-	@Input() placeholder: string = "";
-	@Input() disabled: boolean = false;
+	@Input() type = "text";
+	@Input() placeholder = "";
+	@Input() disabled = false;
 	@Input() readonly?: boolean;
 	@Input() required?: boolean;
 	@Input() name?: string;
-	@Input() maxLength: number = 10;
+	@Input() maxLength = 10;
 	@Input() minLength?: number;
 	@Input() autocomplete?: string;
-	@Input() classInput: string = "";
+	@Input() classInput = "";
 
-	@Output() valueChange = new EventEmitter<any>();
+	@Output() valueChange = new EventEmitter<string | number>();
 	onInput(event: Event) {
 		const value = (event.target as HTMLInputElement).value;
 		this.valueChange.emit(value);
