@@ -12,4 +12,8 @@ import { ButtonComponent } from "../button/button.component";
 })
 export class SidebarComponent {
 	isOpen = input<boolean>(false);
+
+	get inertAttribute() {
+		return this.isOpen() ? null : "inert";
+	}
 }
