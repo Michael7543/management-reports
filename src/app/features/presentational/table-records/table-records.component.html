@@ -1,0 +1,89 @@
+<div class="text-center">
+  <h1 class="p-4 text-lg">Registro de Incidentes</h1>
+</div>
+<div
+  class="p-4 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-y-4"
+>
+  <div class="flex flex-row gap-2">
+    <div>
+      <app-button
+        icon="pi pi-search"
+        styleClass="w-full bg-[#10284c] hover:bg-[#1e4e6c] text-white"
+        label="Buscar"
+      ></app-button>
+    </div>
+    <div>
+      <app-input></app-input>
+    </div>
+  </div>
+  <div class="flex flex-row justify-start md:justify-end gap-4">
+    <div>
+      <app-button
+        icon="pi pi-file-pdf"
+        styleClass="w-full bg-red-600 hover:bg-red-700 text-white"
+        label="PDF"
+      ></app-button>
+    </div>
+    <div>
+      <app-button
+        icon="pi pi-file-excel"
+        styleClass="w-full bg-green-600 hover:bg-green-700 text-white"
+        label="Excel"
+      ></app-button>
+    </div>    
+  </div>
+</div>
+<div class="overflow-x-auto w-full">
+  <p-table
+    [value]="records"
+    [paginator]="true"
+    [rows]="5"
+    responsiveLayout="stack"
+    class="min-w-full md:min-w-[60rem]"
+  >
+    <ng-template pTemplate="header">
+      <tr>
+        <th class="text-left">Fecha</th>
+        <th class="text-left">Tipo Evento</th>
+        <th class="text-left">Nombre Evento</th>
+        <th class="text-left">Usuario</th>
+        <th class="text-left">Estado</th>
+        <th class="text-left">Hora Inicio</th>
+        <th class="text-left">Hora Fin</th>
+        <th class="text-left">Función</th>
+        <th class="text-left">Actividad</th>
+        <th class="text-left">Acciones</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-record>
+      <tr>
+        <td class="text-left">{{ record.fecha }}</td>
+        <td class="text-left">{{ record.type_event }}</td>
+        <td class="text-left">{{ record.name_event }}</td>
+        <td class="text-left">{{ record.user }}</td>
+        <td class="text-left">{{ record.estado }}</td>
+        <td class="text-left">{{ record.hora_inicio }}</td>
+        <td class="text-left">{{ record.hora_fin }}</td>
+        <td class="text-left">{{ record.funcion }}</td>
+        <td class="text-left">{{ record.actividad }}</td>
+        <td class="flex flex-row sm:flex-col gap-2">
+          <app-button
+            icon="pi pi-eye"
+            label="Visualizar"
+            styleClass="bg-blue-400 hover:bg-blue-500 text-white"
+          />
+          <app-button
+            icon="pi pi-pencil"
+            label="Editar"
+            styleClass="bg-amber-400 hover:bg-amber-500 text-white"
+          />
+          <app-button
+            icon="pi pi-trash"
+            label="Eliminar"
+            styleClass="bg-red-500 hover:bg-red-600 text-white"
+          />
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
