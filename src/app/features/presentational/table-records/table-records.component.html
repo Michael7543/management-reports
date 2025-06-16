@@ -1,106 +1,57 @@
-<div class="text-center">
-  <h1 class="text-4xl font-bold py-6 text-[#10284c] uppercase">Registro de Incidentes</h1>
+<div class="container mx-auto text-center">
+  <h1 class="py-6 text-4xl font-bold text-pretty text-[#10284c] uppercase">Registro de Incidentes</h1>
 </div>
 
-<div class="mx-auto container grid grid-cols-1 md:grid-cols-2 gap-6 pb-6">
-
-  <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+<div class="container mx-auto grid grid-cols-1 gap-6 pb-6 md:grid-cols-2">
+  <div class="flex flex-row items-start gap-4 sm:items-center">
     <app-input class="w-full sm:w-auto" placeholder="Buscar..." />
-    <app-button
-      icon="pi pi-search"
-      styleClass="!bg-[#10284c] hover:!bg-[#1e4e6c] !text-white px-4"
-      label="Buscar"
-    ></app-button>
+    <app-button icon="pi pi-search" styleClass="!bg-[#10284c] hover:!bg-[#1e4e6c] !text-white px-4" label="Buscar" />
   </div>
 
-  <div class="flex flex-col sm:flex-row md:justify-end items-start sm:items-center gap-4">
-    <app-button
-      icon="pi pi-file-pdf"
-      styleClass="!bg-red-600 hover:!bg-red-700 !text-white px-4"
-      label="PDF"
-      severity="danger"
-    ></app-button>
-    <app-button
-      icon="pi pi-file-excel"
-      styleClass="!bg-green-600 hover:!bg-green-700 !text-white px-4"
-      label="Excel"
-      severity="success"
-    ></app-button>
+  <div class="flex flex-row items-start gap-4 sm:items-center md:justify-end">
+    <app-button icon="pi pi-file-pdf" styleClass="!bg-red-600 hover:!bg-red-700 !text-white px-4" label="PDF" severity="danger" />
+    <app-button icon="pi pi-file-excel" styleClass="!bg-green-600 hover:!bg-green-700 !text-white px-4" label="Excel" severity="success" />
   </div>
 </div>
 
-<div class="mx-auto container">
-  <p-table
-    [value]="records"
-    [paginator]="true"
-    [rows]="5"
-    [scrollable]="true"
-    currentPageReportTemplate="Registros {first} de {last} de {totalRecords} en total"
-    [showCurrentPageReport]="true"
-    [rowsPerPageOptions]="[10, 25, 50]"
-    responsiveLayout="scroll"
-    scrollHeight="flex"
-  >
+<div class="container mx-auto">
+  <p-table [value]="records" [paginator]="true" [rows]="5" [scrollable]="true" currentPageReportTemplate="Registros {first} de {last} de {totalRecords} en total" [showCurrentPageReport]="true" [rowsPerPageOptions]="[10, 25, 50]" responsiveLayout="scroll" scrollHeight="flex">
     <ng-template pTemplate="header">
       <tr class="!text-xs">
-        <th class="text-left font-medium px-4 py-3" pSortableColumn="fecha">
+        <th class="px-4 py-3 text-left font-medium" pSortableColumn="fecha">
           Fecha
           <p-sortIcon field="fecha" class="ml-2 text-xs text-gray-500" />
         </th>
-        <th class="text-left font-medium px-4 py-3">Tipo Evento</th>
-        <th class="text-left font-medium px-4 py-3">Nombre Evento</th>
-        <th class="text-left font-medium px-4 py-3">Usuario</th>
-        <th class="text-left font-medium px-4 py-3">Estado</th>
-        <th class="text-left font-medium px-4 py-3">Hora Inicio</th>
-        <th class="text-left font-medium px-4 py-3">Hora Fin</th>
-        <th class="text-left font-medium px-4 py-3">Función</th>
-        <th class="text-left font-medium px-4 py-3">Actividad</th>
-        <th class="text-left font-medium px-4 py-3">Acciones</th>
+        <th class="px-4 py-3 text-left font-medium text-pretty">Tipo Evento</th>
+        <th class="px-4 py-3 text-left font-medium text-pretty">Nombre Evento</th>
+        <th class="px-4 py-3 text-left font-medium text-pretty">Usuario</th>
+        <th class="px-4 py-3 text-left font-medium text-pretty">Estado</th>
+        <th class="px-4 py-3 text-left font-medium text-pretty">Hora Inicio</th>
+        <th class="px-4 py-3 text-left font-medium text-pretty">Hora Fin</th>
+        <th class="px-4 py-3 text-left font-medium text-pretty">Función</th>
+        <th class="px-4 py-3 text-left font-medium text-pretty">Actividad</th>
+        <th class="px-4 py-3 text-left font-medium text-pretty">Acciones</th>
       </tr>
     </ng-template>
 
     <ng-template pTemplate="body" let-record>
       <tr class="!text-xs">
-        <td class="text-left px-4 py-2">{{ record.fecha | date: 'dd/MM/yyyy' }}</td>
-        <td class="text-left px-4 py-2">{{ record.type_event }}</td>
-        <td class="text-left px-4 py-2">{{ record.name_event }}</td>
-        <td class="text-left px-4 py-2">{{ record.user }}</td>
-        <td class="text-left px-4 py-2">
+        <td class="px-4 py-2 text-left">{{ record.fecha | date: 'dd/MM/yyyy' }}</td>
+        <td class="px-4 py-2 text-left">{{ record.type_event }}</td>
+        <td class="px-4 py-2 text-left">{{ record.name_event }}</td>
+        <td class="px-4 py-2 text-left">{{ record.user }}</td>
+        <td class="px-4 py-2 text-left">
           <p-tag [value]="record.estado" [severity]="getSeverity(record.estado)" styleClass="!text-xs" />
         </td>
-        <td class="text-left px-4 py-2">{{ record.hora_inicio | date: 'shortTime' }}</td>
-        <td class="text-left px-4 py-2">{{ record.hora_fin | date: 'shortTime' }}</td>
-        <td class="text-left px-4 py-2">{{ record.funcion }}</td>
-        <td class="text-left px-4 py-2">{{ record.actividad }}</td>
+        <td class="px-4 py-2 text-left">{{ record.hora_inicio | date: 'shortTime' }}</td>
+        <td class="px-4 py-2 text-left">{{ record.hora_fin | date: 'shortTime' }}</td>
+        <td class="px-4 py-2 text-left">{{ record.funcion }}</td>
+        <td class="px-4 py-2 text-left">{{ record.actividad }}</td>
         <td class="flex flex-col gap-2 px-4 py-2">
-          <app-button
-            icon="pi pi-eye"
-            label="Visualizar"
-            styleClass="!bg-blue-500 hover:!bg-blue-600 !text-xs"
-            size="small"
-            severity="info"
-          ></app-button>
-          <app-button
-            icon="pi pi-download"
-            label="Descargar"
-            styleClass="!bg-green-500 hover:!bg-green-600 !text-xs"
-            size="small"
-            severity="success"
-          ></app-button>
-          <app-button
-            icon="pi pi-pencil"
-            label="Editar"
-            styleClass="!bg-orange-400 hover:!bg-orange-500 !text-xs"
-            size="small"
-            severity="warn"
-          ></app-button>
-          <app-button
-            icon="pi pi-trash"
-            label="Eliminar"
-            styleClass="!bg-red-500 hover:!bg-red-600 !text-xs"
-            size="small"
-            severity="danger"
-          ></app-button>
+          <app-button icon="pi pi-eye" label="Visualizar" styleClass="!bg-blue-500 hover:!bg-blue-600 !text-xs w-full" size="small" severity="info" />
+          <app-button icon="pi pi-download" label="Descargar" styleClass="!bg-green-500 hover:!bg-green-600 !text-xs w-full" size="small" severity="success" />
+          <app-button icon="pi pi-pencil" label="Editar" styleClass="!bg-orange-400 hover:!bg-orange-500 !text-xs w-full" size="small" severity="warn" />
+          <app-button icon="pi pi-trash" label="Eliminar" styleClass="!bg-red-500 hover:!bg-red-600 !text-xs w-full" size="small" severity="danger" />
         </td>
       </tr>
     </ng-template>
