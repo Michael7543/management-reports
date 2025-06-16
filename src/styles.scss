@@ -8,6 +8,22 @@
   @import "tailwindcss";
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-negro : #1a1a1a;
+        --color-blanco: #ececec;
+    }
+}
+
 body{
   font-family: 'Onest Variable', sans-serif;;
+}
+
+:where(table) {
+    width          : 100%;
+    border-spacing : 0;
+}
+
+:where(th, td) {
+    text-align: left;
 }
