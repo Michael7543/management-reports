@@ -24,7 +24,28 @@
 			],
 			"@assets/*":[
 				"src/assets/*"
-			]
+			],
+			"@core/*": [
+        "src/app/core/*"
+      ],
+			"@domain/*": [
+        "src/app/domain/*"
+      ],
+			"@features/*": [
+        "src/app/features/*"
+      ],
+			"@infrastructure/*": [
+        "src/app/infrastructure/*"
+      ],
+			"@shared/*": [
+        "src/app/shared/*"
+      ],
+			"@environments/*": [
+        "src/environments/*"
+      ],
+			"@icons/*": [
+        "src/assets/icons/*"
+      ]
 		}
 	},
 	"angularCompilerOptions": {
