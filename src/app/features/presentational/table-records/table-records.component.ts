@@ -20,15 +20,21 @@ export class TableRecordsComponent implements OnInit {
 		this.records = [
 			{
 				id: 1,
-				fecha: new Date("2025-06-04"),
+				date: new Date("2025-06-04"),
 				type_event: "SOLICITUD",
-				name_event: "SEGURIDAD TRANSPORTE PUBLICO",
-				user: "JUAN LOSE DE MORALES LLUMISACA",
-				estado: "APROBADO",
-				hora_inicio: new Date("2025-06-04"),
-				hora_fin: new Date("2025-06-04"),
-				funcion: "OPERATIVO DE SEGURIDAD EN TRANSPORTE PÚBLICO",
-				actividad: "SEGURIDAD TRANSPORTE PUBLICO",
+				user_name: "JUAN LOSE DE MORALES LLUMISACA",
+				state: "ATENDIDO",
+				activity: "OPERATIVO CONTROL PARADAS DEL METRO QUITO",
+				sub_activity: "INTERVENCION PARADAS DEL METRO QUITO",
+			},
+			{
+				id: 22341,
+				date: new Date("2025-06-04"),
+				type_event: "EVENTO PROGRAMADO",
+				user_name: "JUAN LOSE DE MORALES LLUMISACA",
+				state: "ATENDIDO",
+				activity: "OPERATIVO CONTROL PARADAS DEL METRO QUITO",
+				sub_activity: "INTERVENCION PARADAS DEL METRO QUITO",
 			},
 		];
 	}
