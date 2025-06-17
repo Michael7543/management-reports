@@ -15,7 +15,7 @@
 </div>
 
 <div class="container mx-auto">
-  <p-table [value]="records" [paginator]="true" [rows]="5" [scrollable]="true" currentPageReportTemplate="Registros {first} de {last} de {totalRecords} en total" [showCurrentPageReport]="true" [rowsPerPageOptions]="[10, 25, 50]" responsiveLayout="scroll" scrollHeight="flex">
+  <p-table [value]="records" [paginator]="true" [rows]="10" [scrollable]="true" currentPageReportTemplate="Registros {first} de {last} de {totalRecords} en total" [showCurrentPageReport]="true" [rowsPerPageOptions]="[10, 25, 50]" responsiveLayout="scroll" scrollHeight="flex">
     <ng-template pTemplate="header">
       <tr class="!text-xs">
         <th class="px-4 py-3 text-left font-medium" pSortableColumn="fecha">
