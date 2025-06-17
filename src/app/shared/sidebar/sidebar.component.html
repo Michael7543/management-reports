@@ -1,11 +1,11 @@
-<aside [attr.inert]="inertAttribute" class="absolute md:fixed top-0 bottom-0 left-0 z-60 h-full w-64 bg-white p-4 text-black shadow-md transition-transform duration-300 ease-in-out" [ngClass]="{'transform -translate-x-full': !isOpen()}">
+<aside [attr.inert]="inertAttribute" class="fixed top-0 bottom-0 left-0 z-90 h-full w-64 bg-white p-4 text-black shadow-md transition-transform duration-300 ease-in-out" [ngClass]="{'transform -translate-x-full': !isOpen()}">
   <nav class="flex h-full flex-col justify-center" role="navigation" aria-label="Panel Administrativo">
 
     <div class="mb-6 flex flex-1 flex-col">
       <h2 class="mb-4 text-xl font-bold text-pretty text-[#10284c] uppercase">Panel Administrativo</h2>
       <label for="search" class="mb-1 block text-sm font-medium text-gray-700">Opciones del Panel Administrativo</label>
       <div class="space-y-2">
-        <app-button label="Ver informes de actividad" severity="secondary" size="small" icon="pi pi-angle-right" iconPos="right" styleClass="w-full !bg-[#10284c] hover:!bg-[#1e4e6c] !text-white" />
+        <app-button label="Ver informes de actividad" severity="secondary" size="small" icon="pi pi-angle-right" iconPos="right" styleClass="w-full !bg-[#10284c] hover:!bg-[#1e4e6c] !text-white" routerLink="/table-records" />
       </div>
     </div>
 
