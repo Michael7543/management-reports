@@ -1,87 +1,53 @@
-<div class="text-center">
-  <h1 class="p-4 text-lg">Registro de Incidentes</h1>
+<div class="container mx-auto text-center">
+  <h1 class="py-6 text-4xl font-bold text-pretty text-[#10284c] uppercase">Lista de Incidentes</h1>
 </div>
-<div
-  class="p-4 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-y-4"
->
-  <div class="flex flex-row gap-2">
-    <div>
-      <app-button
-        icon="pi pi-search"
-        styleClass="w-full bg-[#10284c] hover:bg-[#1e4e6c] text-white"
-        label="Buscar"
-      ></app-button>
-    </div>
-    <div>
-      <app-input></app-input>
-    </div>
+
+<div class="container mx-auto grid grid-cols-1 gap-6 pb-6 md:grid-cols-2">
+  <div class="flex flex-row items-start gap-4 sm:items-center">
+    <app-input class="w-full sm:w-auto" placeholder="Buscar..." />
+    <app-button icon="pi pi-search" styleClass="!bg-[#10284c] hover:!bg-[#1e4e6c] !text-white px-4" label="Buscar" />
   </div>
-  <div class="flex flex-row justify-start md:justify-end gap-4">
-    <div>
-      <app-button
-        icon="pi pi-file-pdf"
-        styleClass="w-full bg-red-600 hover:bg-red-700 text-white"
-        label="PDF"
-      ></app-button>
-    </div>
-    <div>
-      <app-button
-        icon="pi pi-file-excel"
-        styleClass="w-full bg-green-600 hover:bg-green-700 text-white"
-        label="Excel"
-      ></app-button>
-    </div>    
+
+  <div class="flex flex-row items-start gap-4 sm:items-center md:justify-end">
+    <app-button icon="pi pi-file-pdf" styleClass="!bg-red-600 hover:!bg-red-700 !text-white px-4" label="PDF" severity="danger" />
+    <app-button icon="pi pi-file-excel" styleClass="!bg-green-600 hover:!bg-green-700 !text-white px-4" label="Excel" severity="success" />
   </div>
 </div>
-<div class="overflow-x-auto w-full">
-  <p-table
-    [value]="records"
-    [paginator]="true"
-    [rows]="5"
-    responsiveLayout="stack"
-    class="min-w-full md:min-w-[60rem]"
-  >
+
+<div class="container mx-auto">
+  <p-table [value]="records" [paginator]="true" [rows]="10" [scrollable]="true" currentPageReportTemplate="Registros {first} de {last} de {totalRecords} en total" [showCurrentPageReport]="true" [rowsPerPageOptions]="[10, 25, 50]" responsiveLayout="scroll" scrollHeight="flex">
     <ng-template pTemplate="header">
-      <tr>
-        <th class="text-left">Fecha</th>
-        <th class="text-left">Tipo Evento</th>
-        <th class="text-left">Nombre Evento</th>
-        <th class="text-left">Usuario</th>
-        <th class="text-left">Estado</th>
-        <th class="text-left">Hora Inicio</th>
-        <th class="text-left">Hora Fin</th>
-        <th class="text-left">Función</th>
-        <th class="text-left">Actividad</th>
-        <th class="text-left">Acciones</th>
+      <tr class="!text-xs">
+        <th class="px-4 py-3 text-left font-medium text-pretty">ID</th>
+        <th class="px-4 py-3 text-left font-medium" pSortableColumn="fecha">
+          Fecha
+          <p-sortIcon field="fecha" class="ml-2 text-xs" />
+        </th>
+        <th class="px-4 py-3 text-left font-medium text-pretty">Tipo Evento</th>
+        <th class="px-4 py-3 text-left font-medium text-pretty">Usuario</th>
+        <th class="px-4 py-3 text-left font-medium text-pretty">Estado</th>
+        <th class="px-4 py-3 text-left font-medium text-pretty">Actividad</th>
+        <th class="px-4 py-3 text-left font-medium text-pretty">Subactividad</th>
+        <th class="px-4 py-3 text-left font-medium text-pretty">Acciones</th>
       </tr>
     </ng-template>
+
     <ng-template pTemplate="body" let-record>
-      <tr>
-        <td class="text-left">{{ record.fecha }}</td>
-        <td class="text-left">{{ record.type_event }}</td>
-        <td class="text-left">{{ record.name_event }}</td>
-        <td class="text-left">{{ record.user }}</td>
-        <td class="text-left">{{ record.estado }}</td>
-        <td class="text-left">{{ record.hora_inicio }}</td>
-        <td class="text-left">{{ record.hora_fin }}</td>
-        <td class="text-left">{{ record.funcion }}</td>
-        <td class="text-left">{{ record.actividad }}</td>
-        <td class="flex flex-row sm:flex-col gap-2">
-          <app-button
-            icon="pi pi-eye"
-            label="Visualizar"
-            styleClass="bg-blue-400 hover:bg-blue-500 text-white"
-          />
-          <app-button
-            icon="pi pi-pencil"
-            label="Editar"
-            styleClass="bg-amber-400 hover:bg-amber-500 text-white"
-          />
-          <app-button
-            icon="pi pi-trash"
-            label="Eliminar"
-            styleClass="bg-red-500 hover:bg-red-600 text-white"
-          />
+      <tr class="!text-xs">
+        <td class="px-4 py-2 text-left">{{ record.id }}</td>
+        <td class="px-4 py-2 text-left">{{ record.date | date: 'dd/MM/yyyy' }}</td>
+        <td class="px-4 py-2 text-left">{{ record.type_event }}</td>
+        <td class="px-4 py-2 text-left">{{ record.user_name }}</td>
+        <td class="px-4 py-2 text-left">
+          <p-tag [value]="record.state" [severity]="getSeverity(record.estado)" styleClass="!text-xs" />
+        </td>
+        <td class="px-4 py-2 text-left">{{ record.activity }}</td>
+        <td class="px-4 py-2 text-left">{{ record.sub_activity }}</td>
+        <td class="flex flex-col gap-2 px-4 py-2">
+          <app-button icon="pi pi-eye" label="Visualizar" styleClass="!bg-blue-500 hover:!bg-blue-600 !text-xs w-full" size="small" severity="info" />
+          <app-button icon="pi pi-download" label="Descargar" styleClass="!bg-green-500 hover:!bg-green-600 !text-xs w-full" size="small" severity="success" />
+          <app-button icon="pi pi-pencil" label="Editar" styleClass="!bg-orange-400 hover:!bg-orange-500 !text-xs w-full" size="small" severity="warn" />
+          <app-button icon="pi pi-trash" label="Eliminar" styleClass="!bg-red-500 hover:!bg-red-600 !text-xs w-full" size="small" severity="danger" />
         </td>
       </tr>
     </ng-template>

@@ -1,8 +1,8 @@
-<div class="flex min-h-screen">
+<div class="flex min-h-screen relative">
   <app-sidebar [isOpen]="sidebarOpen" />
-  <div [ngClass]="{'md:ml-64': sidebarOpen, 'ml-0': !sidebarOpen}" class="w-full transition-all duration-300 ease-in-out">
+  <div [ngClass]="{'md:ml-64': sidebarOpen, 'ml-0': !sidebarOpen}" class="w-full h-full transition-all duration-300 ease-in-out">
     <app-header (toggleSidebar)="toggleSidebar()" />
-    <main class="flex-1 p-4">
+    <main class="flex-1 p-4 min-h-screen">
       <router-outlet />
     </main>
     <app-footer />
