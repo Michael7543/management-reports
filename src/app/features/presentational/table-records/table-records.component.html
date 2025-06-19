@@ -2,15 +2,15 @@
   <h1 class="py-6 text-4xl font-bold text-pretty text-[#10284c] uppercase">Lista de Incidentes</h1>
 </div>
 
-<div class="container mx-auto grid grid-cols-1 gap-6 pb-6 md:grid-cols-2">
-  <div class="flex flex-row items-start gap-4 sm:items-center">
-    <app-input class="w-full sm:w-auto" placeholder="Buscar..." />
-    <app-button icon="pi pi-search" styleClass="!bg-[#10284c] hover:!bg-[#1e4e6c] !text-white px-4" label="Buscar" />
+<div class="container mx-auto grid grid-cols-1 gap-6 pb-6 text-xs md:grid-cols-2">
+  <div class="flex items-start justify-between gap-4 sm:items-center sm:justify-start">
+    <app-input placeholder="Buscar por nombre o fecha" class="w-full" />
+    <app-button icon="pi pi-search" styleClass="!bg-[#10284c] hover:!bg-[#1e4e6c] !text-white px-4" size="small" label="Buscar" />
   </div>
 
-  <div class="flex flex-row items-start gap-4 sm:items-center md:justify-end">
-    <app-button icon="pi pi-file-pdf" styleClass="!bg-red-600 hover:!bg-red-700 !text-white px-4" label="PDF" severity="danger" />
-    <app-button icon="pi pi-file-excel" styleClass="!bg-green-600 hover:!bg-green-700 !text-white px-4" label="Excel" severity="success" />
+  <div class="flex items-start justify-between gap-4 sm:items-center md:justify-end">
+    <app-button icon="pi pi-file-pdf" pTooltip="Descargar el archivo PDF" tooltipPosition="left" styleClass="!bg-red-600 hover:!bg-red-700 !text-white px-4" label="PDF" severity="danger" size="small" />
+    <app-button icon="pi pi-file-excel" pTooltip="Descargar los datos en formato Excel" tooltipPosition="left" styleClass="!bg-green-600 hover:!bg-green-700 !text-white px-4" label="Excel" severity="success" size="small" />
   </div>
 </div>
 

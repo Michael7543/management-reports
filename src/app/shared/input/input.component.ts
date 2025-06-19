@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from "@angular/core";
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output, input } from "@angular/core";
 import { InputTextModule } from "primeng/inputtext";
 
 @Component({
@@ -18,7 +18,8 @@ export class InputComponent {
 	@Input() maxLength = 10;
 	@Input() minLength?: number;
 	@Input() autocomplete?: string;
-	@Input() classInput = "";
+	@Input() pSize: "small" | "large" = "small";
+	class = input<string>();
 
 	@Output() valueChange = new EventEmitter<string | number>();
 	onInput(event: Event) {
