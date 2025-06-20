@@ -1,0 +1,29 @@
+<div class="grid justify-items-center">
+  <div
+    class="flex flex-col justify-center gap-4 w-full max-w-md mx-auto mt-10 p-6 lg:border border-gray-300 rounded-2xl shadow-lg bg-white"
+  >
+    <div class="text-center">
+      <h1 class="p-2 text-4xl font-bold text-pretty text-[#10284c] uppercase">
+        INICIAR SESION
+      </h1>
+      <app-user-icon class="flex justify-center"></app-user-icon>
+    </div>
+    <div>
+      <p class="text-black">CORREO</p>
+      <app-input classInput="text-lg p-3 w-full" type="email" />
+    </div>
+    <div class="flex flex-col">
+      <p class="text-black">CONTRASEÑA</p>
+      <app-input classInput="text-lg p-3 w-full" type="password" />
+      <a class="text-black text-right font-bold" href=""
+        >Olvide mi contraseña?</a
+      >
+    </div>
+    <div class="self-center">
+      <app-button
+        label="ENVIAR"
+        styleClass="!bg-[#10284c] hover:!bg-[#1e4e6c] !text-white border-black px-4"
+      ></app-button>
+    </div>
+  </div>
+</div>
