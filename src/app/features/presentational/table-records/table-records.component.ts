@@ -5,10 +5,11 @@ import { ButtonComponent } from "@shared/button/button.component";
 import { InputComponent } from "@shared/input/input.component";
 import { TableModule } from "primeng/table";
 import { Tag } from "primeng/tag";
+import { TooltipModule } from "primeng/tooltip";
 
 @Component({
 	selector: "app-table-records",
-	imports: [TableModule, Tag, CommonModule, ButtonComponent, InputComponent],
+	imports: [TableModule, Tag, CommonModule, ButtonComponent, InputComponent, TooltipModule],
 	templateUrl: "./table-records.component.html",
 	styleUrl: "./table-records.component.scss",
 	changeDetection: ChangeDetectionStrategy.OnPush,

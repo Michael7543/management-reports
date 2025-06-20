@@ -1,6 +1,7 @@
 <input
   pInputText
   [type]="type"
+  [pSize]="pSize"
   [placeholder]="placeholder"
   [disabled]="disabled"
   [readonly]="readonly"
@@ -9,6 +10,6 @@
   [maxLength]="maxLength"
   [minLength]="minLength"
   [autocomplete]="autocomplete"
-  [class]="classInput"
+  [class]="class()"
   (input)="onInput($event)"
 />
