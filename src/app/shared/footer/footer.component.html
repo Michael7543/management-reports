@@ -6,7 +6,7 @@
         <ul class="mt-2 flex w-max flex-col gap-2">
           <li>
             <a href="tel:123456789" class="flex items-center gap-2 hover:underline focus:ring-2 focus:ring-blue-600 focus:outline-none" aria-label="Llamar al número de contacto">
-              <app-phone-icon />
+              <app-phone-icon [iconClass]="'aspect-square object-contain'" [size]="{ width: 24, height: 24 }"/>
               123456789
             </a>
           </li>
@@ -24,17 +24,17 @@
         <ul class="mt-2 flex w-max items-center gap-4">
           <li>
             <a href="http://" aria-label="Síguenos en YouTube" class="hover:opacity-75 focus:ring-2 focus:ring-red-600 focus:outline-none">
-              <app-youtube-icon />
+              <app-youtube-icon [iconClass]="'aspect-square object-contain'" [size]="{ width: 32, height: 24 }"/>
             </a>
           </li>
           <li>
             <a href="http://" aria-label="Síguenos en X (Twitter)" class="hover:opacity-75 focus:ring-2 focus:ring-gray-600 focus:outline-none">
-              <app-x-icon />
+              <app-x-icon [iconClass]="'aspect-square object-contain'" [size]="{ width: 22, height: 22 }" />
             </a>
           </li>
           <li>
             <a href="http://" aria-label="Síguenos en Facebook" class="hover:opacity-75 focus:ring-2 focus:ring-blue-600 focus:outline-none">
-              <app-facebook-icon />
+              <app-facebook-icon [iconClass]="'aspect-square object-contain'" [size]="{ width: 24, height: 24 }"/>
             </a>
           </li>
         </ul>
