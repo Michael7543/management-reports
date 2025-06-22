@@ -9,7 +9,7 @@ import { ButtonModule } from "primeng/button";
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ButtonComponent {
-	@Input({ required: true }) label = "";
+	@Input() label = "";
 	@Input() icon? = "";
 	@Input() iconPos: "left" | "right" = "left";
 	@Input() ariaLabel = "";
