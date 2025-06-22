@@ -5,7 +5,7 @@
       <h2 class="mb-4 text-xl font-bold text-pretty text-[#10284c] uppercase">Panel Administrativo</h2>
       <label for="search" class="mb-1 block text-sm font-medium text-gray-700">Opciones del Panel Administrativo</label>
       <div class="space-y-2">
-        <app-button label="Ver informes de actividad" severity="secondary" size="small" icon="pi pi-angle-right" iconPos="right" styleClass="w-full !bg-[#10284c] hover:!bg-[#1e4e6c] !text-white" routerLink="/table-records" />
+        <app-button label="Ver informes de actividad" severity="secondary" size="small" icon="pi pi-angle-right" iconPos="right" styleClass="w-full !bg-[#10284c] hover:!bg-[#1e4e6c] !text-white" routerLink="/dashboard" />
       </div>
     </div>
 
@@ -13,7 +13,7 @@
       <a routerLink="/" routerLinkActive="active" class="w-full rounded-md px-4 py-2 text-[#10284c] outline hover:bg-[#1e4e6c] hover:text-white hover:underline" aria-label="Ir a configuración">Configuración</a>
 
       <div class="w-full">
-        <app-button label="Cerrar Sesión" icon="pi pi-sign-out" styleClass="w-full !bg-[#10284c] hover:!bg-[#1e4e6c] !text-white" ariaLabel="Cerrar sesión y salir del panel administrativo" />
+        <app-button routerLink="/login" label="Cerrar Sesión" icon="pi pi-sign-out" styleClass="w-full !bg-[#10284c] hover:!bg-[#1e4e6c] !text-white" ariaLabel="Cerrar sesión y salir del panel administrativo" />
       </div>
     </div>
   </nav>
