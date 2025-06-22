@@ -1,8 +1,8 @@
 import { CommonModule } from "@angular/common";
 import { ChangeDetectionStrategy, Component, type OnInit } from "@angular/core";
-import type { Records } from "@domain/model/generalData/Records";
-import { ButtonComponent } from "@shared/button/button.component";
-import { InputComponent } from "@shared/input/input.component";
+import type { Records } from "@app/domain/models/generalData/Records";
+import { ButtonComponent } from "@app/shared/components/buttons/button/button.component";
+import { InputComponent } from "@app/shared/components/inputs/input/input.component";
 import { TableModule } from "primeng/table";
 import { Tag } from "primeng/tag";
 import { TooltipModule } from "primeng/tooltip";
