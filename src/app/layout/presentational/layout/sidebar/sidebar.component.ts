@@ -1,7 +1,7 @@
 import { NgClass } from "@angular/common";
 import { ChangeDetectionStrategy, Component, input } from "@angular/core";
 import { RouterLink, RouterLinkActive } from "@angular/router";
-import { ButtonComponent } from "../button/button.component";
+import { ButtonComponent } from "@shared/components/buttons/button/button.component";
 
 @Component({
 	selector: "app-sidebar",
