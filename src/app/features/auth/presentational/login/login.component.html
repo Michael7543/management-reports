@@ -1,29 +1,29 @@
-<div class="grid justify-items-center">
-  <div
-    class="flex flex-col justify-center gap-4 w-full max-w-md mx-auto mt-10 p-6 lg:border border-gray-300 rounded-2xl shadow-lg bg-white"
-  >
-    <div class="text-center">
-      <h1 class="p-2 text-4xl font-bold text-pretty text-[#10284c] uppercase">
-        INICIAR SESION
-      </h1>
-      <app-user-icon class="flex justify-center"></app-user-icon>
+<section class="bg-gray-100 min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
+  <div class="w-full max-w-md mx-auto mt-10 p-6 bg-white rounded-xl shadow-lg border border-gray-200">
+
+    <div class="text-center mb-8">
+      <h1 class="text-3xl sm:text-4xl font-semibold text-[#10284c] uppercase tracking-wide">Accede a tu cuenta</h1>
+      <app-user-icon class="flex justify-center mt-4 text-4xl text-[#10284c]"></app-user-icon>
     </div>
-    <div>
-      <p class="text-black">CORREO</p>
-      <app-input class="text-lg p-3 w-full" type="email" />
-    </div>
-    <div class="flex flex-col">
-      <p class="text-black">CONTRASEÑA</p>
-      <app-input class="text-lg p-3 w-full" type="password" />
-      <a class="text-black text-right font-bold" href=""
-        >Olvide mi contraseña?</a
-      >
-    </div>
-    <div class="self-center">
-      <app-button
-        label="ENVIAR"
-        styleClass="!bg-[#10284c] hover:!bg-[#1e4e6c] !text-white border-black px-4"
-      ></app-button>
-    </div>
+
+    <form>
+      <div class="mb-4">
+        <label for="email" class="block text-sm font-medium text-gray-700">Correo electrónico</label>
+        <app-input id="email" type="email" class="w-full" placeholder="ejemplo@correo.com" aria-label="Correo electrónico" />
+      </div>
+
+      <div class="mb-6">
+        <label for="password" class="block text-sm font-medium text-gray-700">Contraseña</label>
+        <app-input id="password" type="password" class="w-full" placeholder="Tu contraseña" aria-label="Contraseña" />
+        <a href="#" class="text-sm text-[#10284c] hover:underline mt-2 block text-right">¿No recuerdas tu contraseña?</a>
+      </div>
+
+      <div class="mb-4">
+        <app-button 
+          label="Iniciar sesión"
+          styleClass="!w-full !bg-[#10284c] hover:!bg-[#1e4e6c] !text-white" aria-label="Iniciar sesión en tu cuenta"
+        ></app-button>
+      </div>
+    </form>
   </div>
-</div>
+</section>
